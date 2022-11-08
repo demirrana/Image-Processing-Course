@@ -1,0 +1,7 @@
+QUESTION 3:
+For a 5x5 box filter, all the pixels will be added together meaning that 25 integer pixel values will be summed. So, 25 integer additions will be executed. Then, this summation will be divided into the number of total pixels in box filter which is 25. So, 1 floating point division is executed. 
+For the integral image implementation, we assume that we have integral image array. Then, computing the box filter from this array requires 4 integer additions and 1 floating point division. This will not change for any wxw box filter since the corner values are enough for us. 
+As a result, integral image implementation takes much less time than the normal box filter implementation.
+
+QUESTION 4:
+Integral image method in order to obtain the box filter computation is computed in constant time which is efficient. However, all the integral image values should be held in the memory. In addition to this, these values cannot be held in an uint8 variable for the summations that are higher than maximum intensity value. So, uint8 conversion is eventually required.
