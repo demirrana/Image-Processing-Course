@@ -1,0 +1,6 @@
+Question 3:
+The best PSNR value belongs to center weighted median filter. That is because MSE is lower for this filter compared to others. Since the median of the 5x5 square is forced to be closer to center, its focus is on the center. So, it is closer to image that has no noise.
+
+Question 4:
+PSNR may not be dependable all the time. PSNR depends on MSE. When the value of MSE is bigger, PSNR value is lower. In order for the MSE to be bigger, the average difference of all pixels between two images should be a big number. However, this may be the case: We have two images respectively A and B. Except for A's a little part, A and B are alike. But the little part of A is so different than B's that part. This difference is really big when we look at that part. But, because MSE takes the average, this difference looks much lower. So, it is a good metric when all pixels behave similar when they are compared to other image's pixels. Another example is the difference between an image and its transpose. Practically, they are the same.
+The transformation that will be applied to the center weighted median filter is taking its transpose in the code.
